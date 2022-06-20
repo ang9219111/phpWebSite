@@ -19,11 +19,16 @@ if (mysqli_num_rows(mysqli_query($link, $check)) == 0) {             //如果row
     $sql = "INSERT INTO `user` (`username`,`password`,`userId`) VALUE('$username','$password','$acNum')"; //將使用者註冊的username及密碼及自動生成id插入資料庫
     if (mysqli_query($link, $sql)) {     //插入後,回傳註冊成功給前端(顯示於使用者畫面)
         $sql1 = "CREATE TABLE `$cart`(`cartId` VARCHAR(8) NOT NULL, `userId` VARCHAR(8) NOT NULL,
-        `goodId` VARCHAR(8) NOT NULL,`goodNum` VARCHAR(8) NOT NULL,`goodName`VARCHAR(8) NOT NULL,`goodPrice` VARCHAR(8) NOT NULL )";
+        `goodId` VARCHAR(8) NOT NULL,`goodNum` VARCHAR(8) NOT NULL,`goodName`VARCHAR(8) NOT NULL,
+        `goodPrice` VARCHAR(8) NOT NULL,`goodType` VARCHAR(8) NOT NULL )";
+
         $sql2 = "CREATE TABLE `$order`(`orderId` VARCHAR(8) NOT NULL, `userId` VARCHAR(8) NOT NULL,
-        `goodId` VARCHAR(8) NOT NULL,`goodName` VARCHAR(8) NOT NULL,`goodNum` VARCHAR(8) NOT NULL,`goodPrice` VARCHAR(8) NOT NULL,`states` VARCHAR(8) NOT NULL,`startDate` VARCHAR(25) NOT NULL
-        ,`endDate` VARCHAR(25) NOT NULL)";
-        $sql3 = "CREATE TABLE `$allOrder`(`orderId` VARCHAR(8) NOT NULL, `userId` VARCHAR(8) NOT NULL,`totalMoney` VARCHAR(8) NOT NULL,`states` VARCHAR(8) NOT NULL,`startDate` VARCHAR(25) NOT NULL
+        `goodId` VARCHAR(8) NOT NULL,`goodName` VARCHAR(8) NOT NULL,`goodNum` VARCHAR(8) NOT NULL,
+        `goodPrice` VARCHAR(8) NOT NULL,`states` VARCHAR(8) NOT NULL,`startDate` VARCHAR(25) NOT NULL
+        ,`endDate` VARCHAR(25) NOT NULL,`goodType` VARCHAR(8) NOT NULL )";
+
+        $sql3 = "CREATE TABLE `$allOrder`(`orderId` VARCHAR(8) NOT NULL, `userId` VARCHAR(8) NOT NULL,
+        `totalMoney` VARCHAR(8) NOT NULL,`states` VARCHAR(8) NOT NULL,`startDate` VARCHAR(25) NOT NULL
         ,`endDate` VARCHAR(25) NOT NULL)";
         mysqli_query($link, $sql1);
         mysqli_query($link, $sql2);

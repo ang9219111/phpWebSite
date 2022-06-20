@@ -10,14 +10,14 @@ $userId=$_POST["userId"];
 $goodId=$_POST["goodId"];
 $goodName=$_POST["goodName"];
 $goodPrice=$_POST["goodPrice"];
+$goodType = $_POST["goodType"];
 
 $cart=$userId."cart";
 
 $check = "SELECT *FROM `$cart` WHERE `goodId`='$goodId'";
 $result=mysqli_query($link,$check);
 if(mysqli_num_rows(mysqli_query($link,$check))==0){
-    $sql = "INSERT INTO `$cart` (`cartId`,`userId`,`goodId`,`goodName`,`goodNum`,`goodPrice`) 
-    VALUE('$userId','$userId','$goodId','$goodName','1','$goodPrice')";
+    $sql = "INSERT INTO `$cart` (`cartId`,`userId`,`goodId`,`goodName`,`goodNum`,`goodPrice`,`goodType`) VALUE('$userId','$userId','$goodId','$goodName','1','$goodPrice','$goodType')";
     mysqli_query($link,$sql);
 }
 else{

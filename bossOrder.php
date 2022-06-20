@@ -11,6 +11,7 @@ $sql = "SELECT * FROM `bossorder` WHERE `states` != '3'";
 $empty = array(0=>array('endDate' => '',
 'goodId' => '',
 'goodName' => '無',
+'goodType' => '',
 'goodNum'  => '0',
 'goodPrice' => '0',
 'orderId' => '無訂單',

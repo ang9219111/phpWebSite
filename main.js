@@ -37,7 +37,7 @@ function init() 				//取得後端Session (username)的函式
                     goodDiv.appendChild(newDiv);
                     newDiv.setAttribute("style","border:5px black solid");
 
-                    newDiv.setAttribute("onclick","addCart('"+ob[i].goodName+"',"+ob[i].goodPrice+",'"+ob[i].id+"',"+str[1]+")"); 
+                    newDiv.setAttribute("onclick","addCart('"+ob[i].goodName+"','"+ob[i].goodPrice+"','"+ob[i].goodType+"','"+ob[i].goodId+"',"+str[1]+")"); 
                     /*將商品的id以及使用者的id
                     傳輸給前端,以便將商品加入購物車*/
                     newDiv.setAttribute("class","col");
@@ -49,10 +49,11 @@ function init() 				//取得後端Session (username)的函式
 	xmlHTTP.send(null);
 }
 
-function addCart(goodName,goodPrice,goodId,userId)
+function addCart(goodName,goodPrice,goodType,goodId,userId)
 {
     $_xmlHttpRequest();
-    var data = 'userId='+userId+'&goodId='+goodId+'&goodName='+goodName+'&goodPrice='+goodPrice;
+    var data = 'userId='+userId+'&goodId='+goodId+'&goodName='
+    +goodName+'&goodPrice='+goodPrice+'&goodType='+goodType;
     xmlHTTP.open("POST","addCart.php", true);		
 	xmlHTTP.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlHTTP.onreadystatechange=function check_user(){
@@ -68,5 +69,6 @@ function addCart(goodName,goodPrice,goodId,userId)
     console.log(userId);
     console.log(goodName);
     console.log(goodId);
+    console.log(goodType);
     console.log("123");
 }
