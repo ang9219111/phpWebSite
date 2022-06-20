@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html style="height:100% ;">
+
+<head>
+    <meta charset="UTF-8">
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="EXPIRES" CONTENT="0">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>加入商品</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="jquery-3.6.0.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="bootstrap.min.js"></script>
+    <script src="addGood.js"></script>
+</head>
+
+<body style="height:100% ;">
+    <div class="container" style="height:100%;">
+        <div></div>
+
+        <div style="width:100%;height:100%;display:flex;align-items: center;justify-content: center;">
+                <div class="row " style="width:40% ;height: 80%;background-color:rgba(0,0,0,0.5);
+                display: flex;">
+                    <form  method="post"  name="loginForm" onsubmit="checkData(); return false"> <!--當使用者按下登入鍵,
+                        即進入checkData(),並且此處return false的原因是避免頁面刷新.-->
+                        <center><div class="col-md-10 col-md-offset-3 " style="margin-top: 10%;">
+                            <div class="form-group">
+                                <h1>LOGO</h1>
+                                <h4 class="mt-4">加入商品</h4>
+                            </div>
+                            <div class="form-group">
+                                <label>商品名稱</label>
+                                <input type="text" class="form-control " name="goodName" id="goodName" required="required" placeholder="goodName">
+                            </div>
+                            <div class="form-group">
+                                <label>價錢</label>
+                                <input type="text" class="form-control " name="goodPrice" id="goodPrice" required="required" placeholder="goodPrice">
+                            </div>
+                            <div class="form-group">
+                                <label>圖片</label>
+                                <input type="file" class="form-control " name="goodPicture" id="goodPicture" required="required" placeholder="goodPicture">
+                                <label id="accountError"style="color: red;"></label>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary mt-4">確定</button>
+                            </div>
+                        </div></center>
+                    </form>
+                </div>
+        </div>
+    </div>
+        <div></div>
+    </div>
+</body>
+
+</html>

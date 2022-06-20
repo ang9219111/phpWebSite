@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+    <head>
+        <meta charset="UTF-8">
+        <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+        <META HTTP-EQUIV="EXPIRES" CONTENT="0">
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>註冊帳密</title>
+        <!-- 新 Bootstrap 核心 CSS 文件 -->  
+        <link href="bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">  
+        <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->  
+        <script src="jquery-3.6.0.min.js"></script>  
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->  
+        <script src="bootstrap.min.js"></script> 
+        <script src="register.js"></script>
+    </head>
+    <body style="height:100% ;">
+        <div class="container" style="height:100%;">
+    
+            <div class="w-75"style="height:100%;margin:auto">
+                    <div class="row w-50" style="height: 80%;margin:auto;
+                    display: flex;">
+                        <form  method="post" onsubmit="checkData();return false" style="margin-top: 20%;">
+                            <center><div class="col-md-10 col-md-offset-3">
+                                <!--不確定怎麼置中-->
+                                <div class="form-group">
+                                    <h1>G</h1>
+                                    <h3 class="mt-4">Please Register</h4>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control " name="username" id="username" required="required" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control " name="password" id="password" required="required" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control " name="againPassword" id="againPassword" required="required" placeholder="Confirm Password">
+                                    <label id="accountError"style="color: red;"></label>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block" name="Send">註冊</button>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-primary btn-lg btn-block mt-3"
+                                        onclick="location='index.html'">取消</button>
+                                </div>
+                            </div></center>
+                        </form>
+                    </div>
+            </div>
+        </div>
+            <div></div>
+        </div>
+    </body>
+</html>
