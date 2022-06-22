@@ -3,11 +3,12 @@
 require_once 'config.php';
 ?>
 <?php
-$username=$_POST['username'];
+session_start();        //開啟session
+$userName=$_SESSION['userName'];
 $password=$_POST['password'];
 $newpassword=$_POST['newpassword'];
 
-$sql = "UPDATE `user` SET`password` = '$newpassword' WHERE `username`='$username' 
+$sql = "UPDATE `user` SET`password` = '$newpassword' WHERE `username`='$userName' 
 AND `password`= '$password'"; //當輸入的username 及 password 吻合 資料庫內部的資料,即更新其密碼.
 
 $result = mysqli_query($link,$sql); //執行sql語法

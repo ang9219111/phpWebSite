@@ -11,12 +11,28 @@ function $_xmlHttpRequest(){    //連線函式
     }
 }
 
+function init(){
+	$_xmlHttpRequest();
+	xmlHTTP.open("POST","updateInit.php", true);		
+	xmlHTTP.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlHTTP.onreadystatechange=function check_user(){
+        if(xmlHTTP.readyState == 4){
+            if(xmlHTTP.status == 200){
+                var str;
+                str=xmlHTTP.responseText;
+                document.getElementById("userName").innerHTML=str;
+                document.getElementById("userName2").innerHTML=str;
+
+            }
+        }
+    }
+	xmlHTTP.send(null);
+}
 function checkData(){
-    var username=document.getElementById("username").value;
     var password=document.getElementById("password").value;
     var newpassword=document.getElementById("newpassword").value;
     var newApassword=document.getElementById("newApassword").value;
-    var data ='username='+username+'&password='+password+'&newpassword='+newpassword;
+    var data ='password='+password+'&newpassword='+newpassword;
     $_xmlHttpRequest();
 
     if(newpassword!=newApassword){      //於前端確認輸入密碼以及再次輸入密碼是否相同
