@@ -25,7 +25,6 @@ function init() 				//取得後端Session (username)的函式
                 str = xmlHTTP.responseText;
                 str = str.split('!');       //暫且先用!做切割,假如username有!會有問題.
                 ob = JSON.parse(str[2]);
-                console.log(ob);
                 document.getElementById("userName").innerHTML = str[0];
                 var orderBody = document.getElementById("orderBody");
                 var newTr;

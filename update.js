@@ -19,7 +19,6 @@ function init() {
             if (xmlHTTP.status == 200) {
                 var str;
                 str = xmlHTTP.responseText;
-                console.log(str);
                 str = str.split("!");
                 ob = JSON.parse(str[1]);
                 document.getElementById("userName").innerHTML = str[0];
