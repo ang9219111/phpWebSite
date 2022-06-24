@@ -1,0 +1,30 @@
+	$sql = "CREATE TABLE `顧客編號cart`(`cartId` VARCHAR(8) NOT NULL, `userId` VARCHAR(8) NOT NULL,		//顧客購物車
+        `goodId` VARCHAR(8) NOT NULL,`goodNum` VARCHAR(8) NOT NULL,`goodName`VARCHAR(8) NOT NULL,
+        `goodPrice` VARCHAR(8) NOT NULL,`goodType` VARCHAR(8) NOT NULL )";
+
+        $sql = "CREATE TABLE `顧客編號order`(`orderId` VARCHAR(8) NOT NULL, `userId` VARCHAR(8) NOT NULL,	//顧客所有訂單詳情
+        `goodId` VARCHAR(8) NOT NULL,`goodName` VARCHAR(8) NOT NULL,`goodNum` VARCHAR(8) NOT NULL,
+        `goodPrice` VARCHAR(8) NOT NULL,`states` VARCHAR(8) NOT NULL,`startDate` VARCHAR(25) NOT NULL
+        ,`endDate` VARCHAR(25) NOT NULL,`goodType` VARCHAR(8) NOT NULL )";
+
+        $sql = "CREATE TABLE `顧客編號allOrder`(`orderId` VARCHAR(8) NOT NULL, `userId` VARCHAR(8) NOT NULL,	//顧客所有訂單(顯示價格)
+        `totalMoney` VARCHAR(8) NOT NULL,`states` VARCHAR(8) NOT NULL,`startDate` VARCHAR(25) NOT NULL
+        ,`endDate` VARCHAR(25) NOT NULL)";
+
+	$sql = "CREATE TABLE `bossallorder`(`orderId` VARCHAR(8) NOT NULL, `userId` VARCHAR(8) NOT NULL,	//老闆所有訂單(顯示價格)
+        `totalMoney` VARCHAR(8) NOT NULL,`states` VARCHAR(8) NOT NULL,`startDate` VARCHAR(25) NOT NULL
+        ,`endDate` VARCHAR(25) NOT NULL)";
+
+	$sql = "CREATE TABLE `bossorder`(`orderId` VARCHAR(8) NOT NULL, `userId` VARCHAR(8) NOT NULL,		//老闆所有訂單詳情
+        `goodId` VARCHAR(8) NOT NULL,`goodName` VARCHAR(8) NOT NULL,`goodNum` VARCHAR(8) NOT NULL,
+        `goodPrice` VARCHAR(8) NOT NULL,`states` VARCHAR(8) NOT NULL,`startDate` VARCHAR(25) NOT NULL
+        ,`endDate` VARCHAR(25) NOT NULL,`goodType` VARCHAR(8) NOT NULL )";
+
+	$sql = "CREATE TABLE `good` (`goodId` VARCHAR(8) NOT NULL , `goodType` VARCHAR(8) NOT NULL, 
+	`goodName` VARCHAR(8) NOT NULL , `goodPrice` VARCHAR(8) NOT NULL)";
+
+	$sql = "CREATE TABLE `user` (`userId` VARCHAR(8) NOT NULL , `username` VARCHAR(8) NOT NULL, `realName` VARCHAR(8) NOT NULL 
+	`password` VARCHAR(8) NOT NULL , `phone` VARCHAR(12) NOT NULL , `address` VARCHAR(25) NOT NULL ,`emial` VARCHAR(25) NOT NULL";
+	
+
+	
