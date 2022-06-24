@@ -11,8 +11,6 @@ $orderId = $_POST['orderId'];
 $userId = $_POST['userId'];
 $cutomerAllOrder = $userId.'allorder';
 $cutomerOrder = $userId.'order';
-$allOrder=$a."allorder";
-$order=$a."order";
 
 $sql1 = " UPDATE `$cutomerAllOrder` SET `states` = '1' WHERE `orderId` = '$orderId' ";
 $sql2 = " UPDATE `$cutomerOrderr` SET `states` = '1' WHERE `orderId` = '$orderId' ";

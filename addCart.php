@@ -5,6 +5,7 @@ require_once 'config.php';
 ?>
 
 <?php
+header("Content-Type:text/html;charset=utf-8");
 //addCart.php主要功能為將購物車商品加入資料庫內,以便後續使用者再使用購物車時,會有之前的紀錄.
 $userId=$_POST["userId"];
 $goodId=$_POST["goodId"];

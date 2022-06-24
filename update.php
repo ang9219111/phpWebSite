@@ -3,6 +3,9 @@
 require_once 'config.php';
 ?>
 <?php
+
+header("Content-Type:text/html;charset=utf-8");
+
 session_start();        //開啟session
 $userName=$_SESSION['userName'];
 $password=$_POST['password'];

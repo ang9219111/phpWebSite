@@ -4,6 +4,7 @@ require_once 'config.php';
 ?>
 <?php
 //新增商品的php檔
+header("Content-Type:text/html;charset=utf-8");
 $goodName=$_POST['goodName'];
 
 $goodPrice=$_POST['goodPrice'];

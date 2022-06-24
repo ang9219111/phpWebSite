@@ -5,6 +5,7 @@ require_once 'config.php';
 ?>
 
 <?php
+header("Content-Type:text/html;charset=utf-8");
 
 $userId = $_POST["userId"];
 $cartId = $_POST["cartId"];
